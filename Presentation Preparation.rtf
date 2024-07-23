@@ -1,0 +1,371 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red27\green27\blue27;}
+{\*\expandedcolortbl;;\csgenericrgb\c10588\c10588\c10588;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww12540\viewh15280\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f0\fs28 \cf0 l,o\
+   Xin ch\'e0o t\uc0\u7845 t c\u7843  m\u7885 
+\f1 i ng\uc0\u432 
+\f0 \uc0\u7901 i, m\'ecnh l\'e0 Quang Vinh! Ch\'e0o m\u7915 ng m\u7885 
+\f1 i ng\uc0\u432 
+\f0 \uc0\u7901 
+\f1 i \uc0\u273 
+\f0 \uc0\u7871 n v\u7899 i b\u7843 n demo mi\'eau t\u7843  v\u7873  b\'e0i to\'e1n Digit recognizer hay c\'f2n 
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 c bi\u7871 
+\f1 t \uc0\u273 
+\f0 \uc0\u7871 n l\'e0 b\'e0i to\'e1n nh\u7853 n di\u7879 n ch\u7919  s\u7889  vi\u7871 
+\f1 t tay. Tr\uc0\u432 
+\f0 \uc0\u7899 c ti\'ean, v\u7899 i b\'e0i to\'e1n n\'e0y m\'ecnh 
+\f1 \uc0\u273 
+\f0 \'e3 code tr\'ean kernel c\uc0\u7911 a Kaggle v\'e0 d\u7919  li\u7879 u c\u361 ng \u7903  tr\'ean Kaggle. \u7902  tr\'ean Kernel n\'e0y, ph\u7847 n l\u7899 n c\'e1c frameworks c\u361 
+\f1 ng nh\uc0\u432  libraries \u273 
+\f0 \'e3 
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 c install s\u7861 n, v\u7853 y n\'ean m\'ecnh c\'f3 th\u7875  s\u7917  d\u7909 ng framework Tensorflow m\u7897 t c\'e1ch d\u7877 
+\f1  d\'e0ng. H\uc0\u417 n
+\f0  n\uc0\u7919 a, m\'ecnh c\'f3 th\u7875  training model tr\'ean GPU \u7843 o mi\u7877 n ph\'ed, s\u7869 
+\f1  \uc0\u273 
+\f0 \uc0\u7905  h\u7841 
+\f1 i \uc0\u273 
+\f0 \uc0\u7871 n GPU c\u7911 a m\'e1y t\'ednh. \
+   Quay tr\uc0\u7903  l\u7841 i v\u7899 i b\'e0i to\'e1n, d\u7919  li\u7879 
+\f1 u tr\'ean Kaggle \uc0\u273 \u432 
+\f0 \uc0\u7907 c l\u7845 y trong 1 dataset r\u7845 t n\u7893 i ti\u7871 
+\f1 ng \uc0\u273 \'f3 l\'e0 Mnist ch
+\f0 \uc0\u7913 a h\'e0ng tri\u7879 u h\'ecnh \u7843 nh c\'e1c ch\u7919  s\u7889  vi\u7871 t tay t\u7915  0 \'96 9. 
+\f1 Sau b\uc0\u432 
+\f0 \uc0\u7899 
+\f1 c import c\'e1c th\uc0\u432  vi
+\f0 \uc0\u7879 n c\u361 
+\f1 ng nh\uc0\u432  frameworks c
+\f0 \uc0\u7847 n thi\u7871 t, m\'ecnh s\u7869  import data v\'e0o 2 dataframe
+\f1 s training v\'e0 testing. Nh\uc0\u432  ch\'fang ta c\'f3 th
+\f0 \uc0\u7875  th\u7845 y, d\u7919  li\u7879 u train l\'e0 42000 d\u7919  li\u7879 u hay 42000 h\'ecnh \u7843 nh v\'e0 c\'f3 28000 d\u7919  li\u7879 u test. D\u7919  li\u7879 u training c\'f3 t\u7845 t c\u7843  785 features hay c\'f2n g\u7885 i l\'e0 attributes g\u7891 m 784 features l\'e0 c\'e1c pixels c\u7845 u t\u7841 o th\'e0nh b\u7913 c \u7843 nh v\'e0 1 feature label hay ch\'ednh l\'e0 nh\u7919 ng classes output, l\'e0 c\'e1c ch\u7919  s\u7889  t\u7915  0 \'96 9. S\u7889 
+\f1  l\uc0\u432 
+\f0 \uc0\u7907 ng pixel l\'e0 784 b\u7903 i v\'ec m\u7895 i b\u7913 c \u7843 nh 
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng 28x28 v\u7899 i 28 pixels chi\u7873 u d\u7885 c v\'e0 28 pixels chi\u7873 u ngang. Tuy nhi\'ean, \u7903  d\u7919  li\u7879 
+\f1 u input, c\'e1c pixels \uc0\u273 
+\f0 \'e3 
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 c bi\u7871 
+\f1 n \uc0\u273 
+\f0 \uc0\u7893 i t\u7915  d\u7841 ng 2 Dimension xu\u7889 ng 1 Dimension hay ch\'ednh l\'e0 \u7903  d\u7841 ng vector. \
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f1 \cf0    B\uc0\u432 
+\f0 \uc0\u7899 c ti\u7871 p theo, ta s\u7869  t\'e1ch feature label ra kh\u7887 i d\u7919  li\u7879 
+\f1 u train, khi \uc0\u273 \'f3 ta s
+\f0 \uc0\u7869  c\'f3 dataframe x_train_flattened v\'e0 dataframe y_train l\'e0 column label. 
+\f1 Tuy nhi\'ean, \uc0\u273 
+\f0 \uc0\u7875 
+\f1  c\'f3 \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c t\'ednh t\uc0\u432 \u417 ng quan v
+\f0 \uc0\u7873  v\u7883  tr\'ed c\u7911 a c\'e1c pixels, ch\'fang ta ph\u7843 i reshape d\u7919  li\u7879 u l\u7841 i \u7903  d\u7841 
+\f1 ng 2 Dimension 28x28 \uc0\u273 
+\f0 \uc0\u7875 
+\f1  c\'f3 \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c spatial convolution. Sau khi \uc0\u273 
+\f0 \'e3 c\'f3 
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng m\u7899 i c\u7911 a x_train, ch\'fang ta c\'f3 th\u7875  plot c\'e1c pixels th\'e0nh h\'ecnh \u7843 nh ho\'e0n ch\u7881 nh. \
+   Ti\uc0\u7871 
+\f1 p \uc0\u273 
+\f0 \uc0\u7871 n, ta s\u7869  chia c\'e1c gi\'e1 tr\u7883  c\u7911 a m\u7895 i pixel trong t\u7853 p x_train v\'e0 x_test cho 255. B\u7903 i v\'ec, gi\'e1 tr\u7883  c\u7911 a m\u7895 i pixel c\u7845 u t\u7841 o n\'ean h\'ecnh \u7843 
+\f1 nh \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c l\uc0\u432 u tr
+\f0 \uc0\u7919  m\'f4 t\u7843 
+\f1  \uc0\u273 
+\f0 \uc0\u7897  s\'e1ng c\u7911 
+\f1 a pixel \uc0\u273 \'f3. H
+\f0 \'ecnh \uc0\u7843 nh trong d\u7919  li\u7879 u c\u7911 
+\f1 a ch\'fang ta \uc0\u273 \u432 
+\f0 \uc0\u7907 c t\'ednh 
+\f1 tr\'ean thang \uc0\u273 
+\f0 \uc0\u7897  s\'e1ng Grayscale, v\u7853 y n\'ean gi\'e1 tr\u7883  m\u7895 i pixel l\'e0 1 s\u7889  duy nh\u7845 t c\'f3 th\u7875  t\u7915 
+\f1  0 \'96 255. Th\'f4ng th\uc0\u432 
+\f0 \uc0\u7901 ng, s\u7889 
+\f1  0 \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c coi l\'e0 m\'e0u \uc0\u273 en v\'e0 255 \u273 \u432 
+\f0 \uc0\u7907 c l\u7845 y l\'e0 m\'e0u tr\u7855 ng. C\'e1c gi\'e1 tr\u7883  \u7903  gi\u7919 a t\u7841 o n\'ean c\'e1c s\u7855 c th\'e1i kh\'e1c nhau c\u7911 a m\'e0u x\'e1m. \
+   Okay, v\uc0\u7853 
+\f1 y tr\uc0\u432 
+\f0 \uc0\u7899 
+\f1 c khi \uc0\u273 
+\f0 \uc0\u7871 
+\f1 n b\uc0\u432 
+\f0 \uc0\u7899 c build model, ta s\u7869  c\u7847 n ph\u7843 i t\'e1ch d\u7919  li\u7879 u train th\'e0nh x train, y train v\'e0 x validation, y validation. M\u7909 
+\f1 c \uc0\u273 \'edch l\'e0 ch\'fang ta c
+\f0 \uc0\u7847 
+\f1 n 1 l\uc0\u432 
+\f0 \uc0\u7907 ng d\u7919  li\u7879 u c\'f3 s\u7861 n gi\'e1 tr\u7883 
+\f1  output \uc0\u273 
+\f0 \uc0\u7875 
+\f1  \uc0\u273 \'e1nh gi\'e1 \u273 
+\f0 \uc0\u7897  hi\u7879 u qu\u7843  c\u7911 a model. H\'e0m ch\'fang ta s\u7917  d\u7909 ng l\'e0 train_test_split c\u7911 
+\f1 a th\uc0\u432  vi
+\f0 \uc0\u7879 n sklearn v\u7899 i test_size hay c\'f2n g\u7885 i l\'e0 size c\u7911 a t\u7853 p validation l\'e0 0.1 ngh\u297 a l\'e0 10% d\u7919  li\u7879 
+\f1 u ban \uc0\u273 
+\f0 \uc0\u7847 u. \
+   Gi\uc0\u7901  ch\'fang ta c\'f3 th\u7875  b\u7855 t tay v\'e0o build model training d\u7919  li\u7879 u. Model ta s\u7917  d\u7909 ng cho b\'e0i to\'e1n n\'e0y l\'e0 Convolutional Neural Network. V\u7899 i nh\u7919 
+\f1 ng ai ch\uc0\u432 a c\'f3 ki
+\f0 \uc0\u7871 n th\u7913 c v\u7873  Deep Learning th\'ec kh\'e1i ni\u7879 m n\'e0y c\'f3 v\u7867  s\u7869  kh\'e1 kh\'f3 hi\u7875 u. V\u7853 y n\'ean m\'ecnh n\'ean s\u7869  gi\u7843 i th\'edch qua v\u7873 
+\f1  Neuron Network System v\'e0 ph\uc0\u432 \u417 ng th
+\f0 \uc0\u7913 c ho\u7841 
+\f1 t \uc0\u273 
+\f0 \uc0\u7897 ng c\u7911 a Convolution. Neural Network l\'e0 m\u7897 t m\u7841 ng neuron nh\'e2n t\u7841 o m\'f4 ph\u7887 ng t\u7915  c\'e1c neuron sinh h\u7885 
+\f1 c \uc0\u273 
+\f0 \uc0\u7875  gi\u7843 i quy\u7871 t c\'e1c v\u7845 
+\f1 n \uc0\u273 
+\f0 \uc0\u7873  v\u7873  deep learning v\'e0 tr\'ed tu\u7879  nh\'e2n t\u7841 o. C\u7845 u t\u7841 o c\u7911 a Neural Network g\u7891 m c\'f3 input layer ch\u7913 a d\u7919  li\u7879 u truy\u7873 n v\'e0o, c\'e1c hidden layers v\'e0 output layer. V\u7899 i b\'e0i to\'e1n c\u7911 a ch\'fang ta th\'ec input s\u7869  l\'e0 c\'e1c pixels v\'e0 output l\'e0 c\'e1c s\u7889  t\u7915  0 \'96 9, v\u7853 y vi\u7879 c c\u7911 a ch\'fang ta l\'e0 build nh\u7919 
+\f1 ng hidden layers \uc0\u273 
+\f0 \uc0\u7875  training d\u7919  li\u7879 u 
+\f1 \uc0\u273 
+\f0 \uc0\u7875  c\'f3 th\u7875  d\u7921 
+\f1  \uc0\u273 o\'e1n ch\'ednh x\'e1c nh
+\f0 \uc0\u7845 t c\'f3 th\u7875  h\'ecnh \u7843 
+\f1 nh \uc0\u273 ang mi\'eau t
+\f0 \uc0\u7843  output n\'e0o. \
+
+\f1    C\'e1c hidden layers \uc0\u273 \u432 
+\f0 \uc0\u7907 c build theo th\u7913  t\u7921 
+\f1 , layer \uc0\u273 
+\f0 \uc0\u7847 
+\f1 u ti\'ean \uc0\u273 \u432 
+\f0 \uc0\u7907 c add v\'e0o l\'e0 input layer v\u7899 i c\'e1c hyper-parameters m\'e0 m\'ecnh 
+\f1 \uc0\u273 
+\f0 \'e3 tuning g\uc0\u7891 m: input_shape = (28, 28, 1) mi\'eau t\u7843 
+\f1  \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng h\'ecnh \u7843 
+\f1 nh input d\uc0\u432 
+\f0 \uc0\u7899 i d\u7841 ng 2D, 28 pixels x 28 pixels v\'e0 1 channel m\'e0u (grayscale). V\u7873  Conv2D l\'e0 mi\'eau t\u7843 
+\f1  \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng layer l\'e0 2 Dimension Convolution, s\u7869  cho ph\'e9p layer nh\u7853 n input \u7903  d\u7841 
+\f1 ng 2 Dimension. Tr\uc0\u432 
+\f0 \uc0\u7899 c ti\'ean, Convolution l\'e0 kh\'f4ng g\'ec kh\'e1c ngo\'e0i vi\u7879 c gi\u7843 
+\f1 m \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng b\u7913 c \u7843 nh b\u7857 
+\f1 ng c\'e1ch tr\uc0\u432 
+\f0 \uc0\u7907 t c\u7917 a s\u7893  hay c\'f2n g\u7885 i l\'e0 filter, kernel ho\u7863 c l\'e0 feature detector. V\u7853 
+\f1 y n\'ean khi \uc0\u273 
+\f0 \uc0\u7875 
+\f1  kernel l\uc0\u432 
+\f0 \uc0\u7899 t qua h\'ecnh \u7843 nh c\u7911 
+\f1 a ch\'fang ta, \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng c\u7911 a b\u7913 c \u7843 nh s\u7869  gi\u7843 
+\f1 m \uc0\u273 i t\'f9y theo \u273 
+\f0 \uc0\u7897  l\u7899 p c\u7911 a kernel. Tuy nhi\'ean h\'ecnh \u7843 nh sau khi gi\u7843 
+\f1 m \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 
+\f1 ng \uc0\u273 i s
+\f0 \uc0\u7869  kh\'f4ng th\u7875  t\u7889 
+\f1 i \uc0\u432 u n
+\f0 \uc0\u7871 
+\f1 u nh\uc0\u432  ta \u273 
+\f0 \uc0\u7875  c\u7917 a s\u7893 
+\f1  tr\uc0\u432 
+\f0 \uc0\u7907 
+\f1 t qua 2 pixels c\'f3 \uc0\u273 
+\f0 \uc0\u7897  ch\'eanh l\u7879 ch l\u7899 n. V\u7853 y n\'ean 64 ch\'ednh l\'e0 s\u7889 
+\f1  l\uc0\u432 
+\f0 \uc0\u7907 ng filters c\u7911 
+\f1 a layer convolution \uc0\u273 \'f3. Ngh
+\f0 \uc0\u297 a l\'e0 thay v\'ec x\'e9t 1 b\u7913 c \u7843 nh v\u7899 
+\f1 i 256 \uc0\u273 
+\f0 \uc0\u7897  s\'e1ng kh\'e1c nhau gi\u7919 a c\'e1c pixels, ta t\'e1ch n\'f3 th\'e0nh 64 l\u7899 
+\f1 p ph\'e2n chia \uc0\u273 
+\f0 \uc0\u7897  s\'e1ng, m\u7895 i l\u7899 
+\f1 p x\'e9t 4 c\uc0\u432 
+\f0 \uc0\u7901 
+\f1 ng \uc0\u273 
+\f0 \uc0\u7897  s\'e1ng li\u7873 n k\u7873 
+\f1  nhau. Kernel_size = (7, 7) ch\'ednh l\'e0 \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng c\u7911 a feature detector. Activation \u7903 
+\f1  \uc0\u273 \'e2y ch\'ednh l\'e0 function \u273 \u432 
+\f0 \uc0\u7907 c fit v\'e0o t\u7915 ng layer, v\u7899 i activation = \'93ReLU\'94 th\'ec d\u7919  li\u7879 u s\u7869  
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 c train qua h\'e0m Rectified Linear Unit theo h\u7879  th\u7889 
+\f1 ng neural network. Function n\'e0y \uc0\u273 \u432 
+\f0 \uc0\u7907 c s\u7917  d\u7909 ng kh\'e1 r\u7897 ng r\'e3i thay cho function Sigmoid b\u7903 i v\'ec khi c\'f3 qu\'e1 nhi\u7873 u layers th\'ec c\'e1c tham s\u7889  s\u7869  kh\'f4ng c\u7853 p nh\u7853 
+\f1 t \uc0\u273 \u432 
+\f0 \uc0\u7907 c n\u7919 a hay c\'f2n 
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 c g\u7885 i l\'e0 Vanishing Gradient Problem. Khi th\u7921 c hi\u7879 
+\f1 n Back Propagation \uc0\u273 
+\f0 \uc0\u7875  c\u7853 p nh\u7853 t tham s\u7889 , Gradient s\u7869 
+\f1  ng\'e0y c\'e0ng b\'e9 \uc0\u273 i v\'e0 bi
+\f0 \uc0\u7871 n m\u7845 t. Kh\'f4ng c\'f3 Gradient th\'ec thu\u7853 t to\'e1n kh\'f4ng th\u7875  h\u7885 
+\f1 c \uc0\u273 \u432 
+\f0 \uc0\u7907 c n\u7919 a. V\'ec v\u7853 y n\'ean ch\'fang ta s\u7869  s\u7917  d\u7909 
+\f1 ng function ReLU nh\uc0\u432  l\'e0 m
+\f0 \uc0\u7863 
+\f1 c \uc0\u273 
+\f0 \uc0\u7883 nh. MaxPooling2D c\u361 
+\f1 ng t\uc0\u432 \u417 ng t
+\f0 \uc0\u7921 
+\f1  nh\uc0\u432  Conv2D \u273 
+\f0 \uc0\u7873 u 
+\f1 l\'e0 b\uc0\u432 
+\f0 \uc0\u7899 c gi\u7843 
+\f1 m \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng c\u7911 a \u7843 
+\f1 nh v\'e0 \uc0\u273 \u432 
+\f0 \uc0\u7907 c s\u7917  d\u7909 
+\f1 ng \uc0\u273 
+\f0 \uc0\u7875  l\'e0m gi\u7843 
+\f1 m \uc0\u273 i s
+\f0 \uc0\u7889 
+\f1  l\uc0\u432 
+\f0 \uc0\u7907 
+\f1 ng parameters khi train nh\uc0\u432 ng v
+\f0 \uc0\u7851 n gi\u7919 
+\f1  \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c \uc0\u273 
+\f0 \uc0\u7863 
+\f1 c tr\uc0\u432 ng c
+\f0 \uc0\u7911 a \u7843 
+\f1 nh. H\'e0m Flatten l\'e0 \uc0\u273 
+\f0 \uc0\u7875  bi\u7871 
+\f1 n \uc0\u273 
+\f0 \uc0\u7893 i l\u7841 i c\'e1c d\u7919  li\u7879 u nhi\u7873 u chi\u7873 u v\u7873 
+\f1  \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng c\u7889 
+\f1  \uc0\u273 
+\f0 \uc0\u7883 nh
+\f1  \uc0\u273 
+\f0 \uc0\u7875  train. Dense l\'e0 m\u7897 t layer neural network b\'ecnh t
+\f1 h\uc0\u432 
+\f0 \uc0\u7901 ng v\u7899 i hyperparameters: Unit l\'e0 s\u7889 
+\f1  nodes trong 1 layer. Activation \uc0\u273 
+\f0 \uc0\u7875 
+\f1  c\'f3 \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c layer output th\uc0\u432 
+\f0 \uc0\u7901 ng s\u7917  d\u7909 ng activation = \'93softmax\'94, c\u361 ng gi\u7889 
+\f1 ng nh\uc0\u432  Sigmoid, h\'e0m Softmax c
+\f0 \uc0\u361 
+\f1 ng l\'e0 \uc0\u273 
+\f0 \uc0\u7875  scale gi\'e1 tr\u7883  c\u7911 a m\u7895 i output \u7903  kho\u7843 ng t\u7915  0 \'96 1. \
+
+\f1    Sau b\uc0\u432 
+\f0 \uc0\u7899 c build c\'e1c layer, gi\u7901 
+\f1  ch\'fang ta \uc0\u273 
+\f0 \uc0\u7871 n v\u7899 
+\f1 i b\uc0\u432 
+\f0 \uc0\u7899 c compile, \cf2 \uc0\u7903  h\'e0m n\'e0y ch\'fang ta s\u7917  d\u7909 
+\f1 ng \uc0\u273 
+\f0 \uc0\u7875 
+\f1  training models nh\uc0\u432  thu
+\f0 \uc0\u7853 t to\'e1n train qua optimizer: Adam v\u7899 
+\f1 i loss = \'93Sparse Categorical Cross Entropy\'94 hay ch\'ednh l\'e0 h\'e0m t\'ednh cost function v\'e0 metrics = [\'93accuracy\'94] l\'e0 ph\uc0\u432 \u417 ng th
+\f0 \uc0\u7913 
+\f1 c \uc0\u273 \'e1nh gi\'e1 \u273 \u417 n gi
+\f0 \uc0\u7843 n nh\u7845 
+\f1 t \uc0\u273 \'f3 l\'e0 t
+\f0 \uc0\u7927  l\u7879  gi\u7919 a s\u7889 
+\f1  l\uc0\u432 
+\f0 \uc0\u7907 ng d\u7921 
+\f1  \uc0\u273 o\'e1n \u273 \'fang v\'e0 s
+\f0 \uc0\u7889 
+\f1  l\uc0\u432 
+\f0 \uc0\u7907 ng t\u7853 p d\u7919  li\u7879 u ch\u7841 y qua. \
+   Cu\uc0\u7889 i c\'f9ng, ta s\u7869 
+\f1  fit model \uc0\u273 \'f3 v
+\f0 \uc0\u7899 i t\u7853 p training. V\u7899 i batch \'96 size l\'e0 s\u7889 
+\f1  l\uc0\u432 
+\f0 \uc0\u7907 ng m\u7851 u m\'e0 ta s\u7917  d\u7909 ng cho m\u7895 i l\u7847 n c\u7853 p nh\u7853 t tham s\u7889 
+\f1 . Sau khi \uc0\u273 
+\f0 \'e3 train model v\uc0\u7899 i d\u7919  li\u7879 u train, ta s\u7869  th\u7917 
+\f1  \uc0\u273 \'e1nh gi\'e1 \u273 
+\f0 \uc0\u7897  hi\u7879 u qu\u7843  c\u7911 a model tr\'ean d\u7919  li\u7879 
+\f1 u validation \uc0\u273 
+\f0 \uc0\u7875  xem model c\'f3 b\u7883  overfit hay underfit hay kh\'f4ng. \
+   V\uc0\u7899 
+\f1 i 1 b\'e0i to\'e1n nh\uc0\u432  v
+\f0 \uc0\u7853 
+\f1 y sau khi \uc0\u273 
+\f0 \'e3 
+\f1 \uc0\u273 \'e1nh gi\'e1 qua nhi
+\f0 \uc0\u7873 u l\u7847 n, ta ph\u7843 i li\'ean t\u7909 
+\f1 c thay \uc0\u273 
+\f0 \uc0\u7893 
+\f1 i c\'e1c hyperparameter \uc0\u273 
+\f0 \uc0\u7875 
+\f1  t\uc0\u259 ng \u273 
+\f0 \uc0\u7897  hi\u7879 u qu\u7843  c\u7911 a 
+\f1 model l\'ean. \uc0\u272 
+\f0 \uc0\u7875  hi\u7875 
+\f1 u \uc0\u273 \u432 
+\f0 \uc0\u7907 
+\f1 c \uc0\u273 i
+\f0 \uc0\u7873 u n\'e0y th\'ec ta c\u7847 n ph\u7843 i hi\u7875 u r\'f5 v\u7873  c\'e1ch th\u7913 c ho\u7841 
+\f1 t \uc0\u273 
+\f0 \uc0\u7897 ng c\u7911 a t\u7915 ng function c\u361 
+\f1 ng nh\uc0\u432  hi
+\f0 \uc0\u7875 u s\'e2u v\u7873  neural network. \
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\f1 \cf2    Tuy nhi\'ean, \uc0\u273 
+\f0 \uc0\u7875  ch\u7913 ng minh r\'f5 h
+\f1 \uc0\u417 n v
+\f0 \uc0\u7873  nh\u7919 ng d\u7921 
+\f1  \uc0\u273 o\'e1n c
+\f0 \uc0\u7911 a model v\u7899 i c\'e1c con s\u7889 , m\'ecnh 
+\f1 \uc0\u273 
+\f0 \'e3 nh\uc0\u7901  nh\u7919 ng anh ch\u7883  trong c\'f4ng ty vi\u7871 t c\'e1c ch\u7919  s\u7889  t\u7915 
+\f1  0 \'96 9 \uc0\u273 
+\f0 \uc0\u7875 
+\f1  xem \uc0\u273 
+\f0 \uc0\u7897  hi\u7879 u qu\u7843  c\u7911 
+\f1 a model. Sau v\'e0i b\uc0\u432 
+\f0 \uc0\u7899 c bi\u7871 
+\f1 n \uc0\u273 
+\f0 \uc0\u7893 i \u7843 
+\f1 nh sao cho c\'f9ng \uc0\u273 
+\f0 \uc0\u7883 nh d\u7841 ng v\u7899 i t\u7853 p training, m\'ecnh 
+\f1 \uc0\u273 
+\f0 \'e3 
+\f1 \uc0\u273 \u432 a ra nh
+\f0 \uc0\u7919 ng d\u7921 
+\f1  \uc0\u273 o\'e1n kh\'e1 ch\'ednh x\'e1c v
+\f0 \uc0\u7899 i nh\u7919 ng ch\u7919  s\u7889 
+\f1  \uc0\u273 \'f3. 
+\f0 \
+   
+\f1 Model \uc0\u273 
+\f0 \'e3 
+\f1 \uc0\u273 \u432 
+\f0 \uc0\u7907 c ho\'e0n thi\u7879 
+\f1 n nh\uc0\u432 ng c\'f3 m
+\f0 \uc0\u7897 t s\u7889  nh\u7919 ng c\'e2u h\u7887 i m\'e0 m\'ecnh v\u7851 n c
+\f1 h\uc0\u432 a c\'f3 \u273 \u432 
+\f0 \uc0\u7907 c c\'e2u tr\u7843  l\u7901 i. V\u7853 y n\'ean ch\'fang ta ph\u7843 i lu\'f4n ph\'e1t tri\u7875 
+\f1 n t\uc0\u432  duy, m
+\f0 \uc0\u7903  r\u7897 ng ph\u7841 m vi v\'e0 quy m\'f4 nh\u7853 n th\u7913 c c\u7911 
+\f1 a ch\'fang ta \uc0\u273 
+\f0 \uc0\u7875  c\'f3 th\u7875 
+\f1  \uc0\u273 
+\f0 \uc0\u7863 t nh\u7919 ng c\'e2u h\u7887 
+\f1 i \uc0\u273 \'fang nh
+\f0 \uc0\u7857 m ph\'e1t tri\u7875 n kh\u7843 
+\f1  n\uc0\u259 ng th
+\f0 \uc0\u7845 u hi\u7875 u thu\u7853 t to\'e1n. C\'f3 v\u7853 y ta m\u7899 i c\'f3 th\u7875 
+\f1  \uc0\u273 \u432 a ra nh
+\f0 \uc0\u7919 ng model th\u7853 t s\u7921  ph\'f9 h\u7907 p nh\u7845 t.\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\partightenfactor0
+
+\fs26 \cf0 \
+}
